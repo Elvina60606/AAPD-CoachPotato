@@ -15,14 +15,14 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
     />
-    <script type="module" crossorigin src="/AAPD-CoachPotato/assets/main-DUx3r6Nj.js"></script>
-    <link rel="stylesheet" crossorigin href="/AAPD-CoachPotato/assets/main-BRTpkOww.css">
+    <script type="module" crossorigin src="/AAPD-CoachPotato/assets/main-BVa6--I1.js"></script>
+    <link rel="stylesheet" crossorigin href="/AAPD-CoachPotato/assets/main-BNNTPvTy.css">
   </head>
   <body>
     <div class="bg-accent-50 min-vh-100">
       <!-- 載入手機系統 icon 模擬 -->
       <header
-        class="sticky-top px-7 py-6 d-flex justify-content-between align-items-center"
+        class="fixed-top bg-accent-50 px-7 py-6 d-flex justify-content-between align-items-center"
       >
         <p class="header-time">9:41</p>
         <div class="d-flex align-items-center gap-2">
@@ -37,22 +37,25 @@
           />
         </div>
       </header>
-      <div class="container-md">
+      <!-- 保留空間 -->
+      <div class="app__status-bar-space"></div>
+      <div class="container">
         <!-- 回上一頁按鈕 -->
         <!-- 展示用｜暫時連去數據結果頁 -->
-        <nav class="py-3 px-4 mb-2">
+        <nav class="position-fixed py-3 px-4 mb-2">
           <a href="./onboarding-data.html">
             <i class="ph ph-arrow-left icon__bg-circle--w"></i>
           </a>
         </nav>
+        <div class="app__status-bar-space--prev"></div>
 
         <!-- 主畫面 -->
         <main
-          class="d-flex flex-column align-items-center app__main-bottom-space pt-4 px-2"
+          class="d-flex flex-column align-items-center app__main-bottom-space pt-4"
         >
           <!-- 標題 -->
           <h1 class="fs-3 mb-3 z-1">推薦任務</h1>
-          <p class="lh-lg mb-7 z-1">Coach推薦給您的任務</p>
+          <p class="mb-7 z-1">Coach推薦給您的任務</p>
 
           <!-- 分頁切換用膠囊按鈕 -->
           <!-- 待做　變數：設計需求 → 按選取的項目數量變更按鈕上的數字 -->
@@ -112,7 +115,9 @@
                   autocomplete="off"
                   checked
                 />
-                <label class="btn checkbox__btn" for="sportOption1"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="sportOption1"
                   >仰臥起坐 30次 / 天</label
                 >
 
@@ -124,7 +129,9 @@
                   autocomplete="off"
                   checked
                 />
-                <label class="btn checkbox__btn" for="sportOption2"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="sportOption2"
                   >深蹲 30次 / 天</label
                 >
 
@@ -136,7 +143,9 @@
                   autocomplete="off"
                   checked
                 />
-                <label class="btn checkbox__btn" for="sportOption3"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="sportOption3"
                   >跳繩 50下 / 天</label
                 >
 
@@ -148,7 +157,9 @@
                   autocomplete="off"
                   checked
                 />
-                <label class="btn checkbox__btn" for="sportOption4"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="sportOption4"
                   >有氧訓練 15分鐘有氧 / 天</label
                 >
 
@@ -160,7 +171,9 @@
                   id="sportOption5"
                   autocomplete="off"
                 />
-                <label class="btn checkbox__btn" for="sportOption5"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="sportOption5"
                   >每小時起來走走</label
                 >
 
@@ -171,7 +184,9 @@
                   id="sportOption6"
                   autocomplete="off"
                 />
-                <label class="btn checkbox__btn" for="sportOption6"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="sportOption6"
                   >步數達到 5000步 / 每週3次</label
                 >
               </div>
@@ -194,7 +209,9 @@
                   autocomplete="off"
                   checked
                 />
-                <label class="btn checkbox__btn" for="dietOption1"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="dietOption1"
                   >至少 1/4 份蛋白質 / 每餐</label
                 >
 
@@ -206,7 +223,9 @@
                   id="dietOption2"
                   autocomplete="off"
                 />
-                <label class="btn checkbox__btn" for="dietOption2"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="dietOption2"
                   >至少 1/2 份蔬菜 / 每餐</label
                 >
 
@@ -217,7 +236,9 @@
                   id="dietOption3"
                   autocomplete="off"
                 />
-                <label class="btn checkbox__btn" for="dietOption3"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="dietOption3"
                   >不超過 1/4 份全穀類 / 每餐</label
                 >
 
@@ -228,7 +249,9 @@
                   id="dietOption4"
                   autocomplete="off"
                 />
-                <label class="btn checkbox__btn" for="dietOption4"
+                <label
+                  class="btn checkbox__btn shadow--double"
+                  for="dietOption4"
                   >用餐前喝一杯白開水</label
                 >
               </div>
@@ -237,12 +260,11 @@
         </main>
 
         <!-- 置底確認按鈕 -->
-        <!-- 待做　動態：預設隱藏，捲到底部才出現 -->
-        <!-- 展示用｜暫時連去健康趨勢首頁 -->
-        <footer class="fixed-bottom px-4 pt-4 pb-7">
+        <!-- 待修：js 判斷式無法起作用 -->
+        <footer id="scrollButton" class="fixed-bottom px-4 pt-4 pb-7">
           <button
             type="button"
-            onclick="location.href='health-trend-latest.html'"
+            onclick="location.href='./onboarding-plan.html'"
             class="btn btn-lg btn-accent text-white fw-bold rounded-pill w-100"
           >
             確認

@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>onboarding-1</title>
+    <title>健身計畫｜Coach Potato</title>
+    <!-- 載入 phosphor icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <!-- 載入 animate.css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -13,11 +24,10 @@
     <link rel="stylesheet" crossorigin href="/AAPD-CoachPotato/assets/main-BNNTPvTy.css">
   </head>
   <body>
-    <div
-      class="wrap bg-primary-base overflow-hidden d-flex flex-column align-items-center justify-content-center"
-    >
+    <div class="bg-primary-base min-vh-100">
+      <!-- 載入手機系統 icon 模擬 -->
       <header
-        class="bg-accent-400 px-7 py-6 d-flex justify-content-between align-items-center w-100"
+        class="fixed-top bg-primary-base px-7 py-6 d-flex justify-content-between align-items-center"
       >
         <p class="header-time">9:41</p>
         <div class="d-flex align-items-center gap-2">
@@ -33,41 +43,95 @@
         </div>
       </header>
 
-      <main class="circle-container overflow-hidden z-0 px-4 w-100">
-        <div
-          class="position-relative z-1 d-flex flex-column align-items-center pt-120"
-        >
-          <div
-            class="d-flex flex-column align-items-center mb-3 animate__animated animate__fadeIn animate__delay-2s"
-          >
-            <h3 class="text-white pb-4">嗨！我是Coach Potato</h3>
-            <p class="text-white">我是你的專屬教練！</p>
-            <p class="text-white">讓我們一起開始這段健康旅程吧！</p>
-          </div>
-          <img
-            src="/AAPD-CoachPotato/assets/CoachPotato_go@3x-DlqDKZPe.png"
-            class="animate__animated animate__fadeInUp animate__delay-2s"
-            alt="CoachPotato_go@3x"
-            style="max-width: 311px"
-          />
+      <div class="app__status-bar-space"></div>
+
+      <div class="container">
+        <!-- 回上一頁按鈕 -->
+        <nav class="position-fixed py-3 px-4 mb-2">
+          <a href="./onboarding-quest.html">
+            <i class="ph ph-arrow-left icon__bg-circle--w"></i>
+          </a>
+        </nav>
+      </div>
+      <div class="app__status-bar-space--prev"></div>
+
+      <!-- 主畫面 -->
+      <main class="app__main-bottom-space pt-4">
+        <section class="container d-flex flex-column align-items-center px-2">
+          <!-- 標題 -->
+          <h1 class="fs-3 mb-3">我的健身計劃</h1>
+          <p class="mb-3">預估您的體脂率將在 9月1日 降至</p>
+          <p class="mb-5"><span class="fs-2 fw-bold">23.3</span> %</p>
+        </section>
+
+        <!-- 圖表 -->
+        <div class="chart__box--plan mb-5">
+          <canvas id="myChart"></canvas>
         </div>
-        <div class="circle circle1 bg-accent-50"></div>
-        <div class="circle circle2 bg-accent-200"></div>
-        <div class="circle circle3 bg-accent-300"></div>
-        <div class="circle circle4 bg-accent-400"></div>
+
+        <section class="container">
+          <!-- 表格 -->
+          <div class="plan__table shadow--double mb-5">
+            <table>
+              <tbody>
+                <tr>
+                  <th scope="row" class="pb-3">目標</th>
+                  <td class="pb-3">減脂</td>
+                </tr>
+                <tr class="table__border">
+                  <th scope="row" class="pt-3 pb-3">難度</th>
+                  <td class="pt-3 pb-3">簡單（6周內）</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="pt-3">任務</th>
+                  <td class="pt-3">
+                    運動（4項）：
+                    <ul class="mb-0">
+                      <li>仰臥起坐 30次 / 天</li>
+                      <li>深蹲 30次 / 天</li>
+                      <li>跳繩 30次 / 天</li>
+                      <li>有氧訓練 15分鐘 / 天</li>
+                    </ul>
+                    飲食（1項）：
+                    <ul class="mb-0">
+                      <li>喝水 8杯水 / 天</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 插圖 -->
+          <div class="d-flex flex-column align-items-center">
+            <div
+              class="chat-bubble chat-left chat-shadow bg-white rounded-12 mx-auto"
+            >
+              <p class="fs-7 text-neutral-700" style="line-height: 1.4">
+                太棒了！讓我陪你一起達成目標吧！
+              </p>
+            </div>
+            <img
+              src="/AAPD-CoachPotato/assets/CoachPotato_go@2x-PPQSo_lk.png"
+              alt="CoachPotato_go"
+              class="plan__img--coach"
+            />
+          </div>
+        </section>
       </main>
 
-      <footer class="px-4 pt-4 pb-7 mt-auto bg-primary-base w-100">
-        <a href="onboarding-info.html">
-          <button
-            type="button"
-            class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-2s"
-          >
-            <span class="h3">開始</span>
-          </button>
-        </a>
+      <!-- 置底確認按鈕 -->
+      <!-- 展示用｜暫時連到健康趨勢頁 -->
+      <footer id="scrollButton" class="fixed-bottom d-none px-4 pt-4 pb-7">
+        <button
+          type="button"
+          onclick="location.href='./health-trend-latest.html'"
+          class="btn btn-lg btn-accent text-white fw-bold rounded-pill w-100"
+        >
+          確認
+        </button>
       </footer>
     </div>
-
+    <!-- 載入 chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>
