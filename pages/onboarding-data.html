@@ -8,8 +8,9 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
-    <div class="wrap bottom-safe">
-      <div class="bg-primary-base d-flex flex-column">
+    <div class="bg-primary-base">
+      <div class="d-flex flex-column"
+           style="min-height: 100dvh">
         <%- include('./layout/header'); -%>
         <div class="app__status-bar-space"></div>
         <div class="pb-3 ps-6 mb-4">
@@ -100,22 +101,23 @@
           </div>
         </main>
 
-        <div class="d-flex flex-column align-items-center">
-          <div
-            class="chat-bubble chat-left chat-shadow bg-white rounded-12 mx-auto"
-          >
-            <p class="fs-7 text-neutral-700" style="line-height: 1.4">
-              讓我來和您說說～您的健康狀況吧！
-            </p>
-          </div>
-          <img
-            src="../assets/images/draw_potatoCoach/CoachPotato_go@2x.png"
-            alt="CoachPotato_go"
-            class="chat-coach z-0"
-          />
-        </div>
-
+        
         <footer class="px-4 pt-1 pb-7 mt-auto bg-primary-base w-100">
+          <div class="d-flex flex-column align-items-center">
+            <div
+              class="chat-bubble chat-left chat-shadow bg-white rounded-12 mx-auto"
+            >
+              <p class="fs-7 text-neutral-700" style="line-height: 1.4">
+                讓我來和您說說～您的健康狀況吧！
+              </p>
+            </div>
+            <img
+              src="../assets/images/draw_potatoCoach/CoachPotato_go@2x.png"
+              alt="CoachPotato_go"
+              class="chat-coach z-0"
+            />
+          </div>
+          
           <a href="onboarding-goal-select.html">
             <div
               class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-2s"
