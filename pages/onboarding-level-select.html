@@ -8,9 +8,10 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
-    <div class="wrap bg-primary-100">
-      <div class="bg-primary-100 d-flex flex-column">
-        <header class="header px-7 py-6 d-flex justify-content-between align-items-center">
+    <div class="bg-primary-100">
+      <div class="d-flex flex-column align-items-center overflow-hidden"    
+           style="min-height: 100dvh">
+        <header class="header px-7 py-6 d-flex justify-content-between align-items-center w-100">
             <p class="header-time">9:41</p>
             <div class="d-flex align-items-center gap-2">
                 <img src="../assets/images/icon_phone/Mobile_Signal.svg" alt="Mobile Signal"/>
@@ -20,7 +21,7 @@
             </div>
         </header>        
     <!--上一頁-->
-        <div class="py-3 ps-6 mb-4">
+        <div class="py-3 ps-6 mb-4 w-100">
           <a href="onboarding-goal-select.html" class="btn border-0 p-0">
               <img
                 class="border rounded-circle bg-white arrow-prev-btn"
@@ -29,7 +30,7 @@
           </a>
         </div>
 
-        <main class="d-flex flex-column align-items-center px-5 overflow-hidden">
+        <main class="d-flex flex-column align-items-center px-5 w-100">
           <div class="text-center mb-5">
             <h3 class="text-neutral-950">您期望的任務執行模式</h3>
           </div>
@@ -53,16 +54,12 @@
               <p class="text-black fs-7">2週內完成</p>
             </a>
           </div>
-
-          <div class="overflow-hidden">
-            <img src="../assets/images/draw_potatoCoach/coachpotato_mascot_cap@3x.png" 
-            class="bottom-big-head-coach2"
-            alt="coachpotato_mascot_cap">
-          </div>
-
-
-
         </main>
+        <footer class="overflow-hidden mt-auto">
+          <img src="../assets/images/draw_potatoCoach/coachpotato_mascot_cap@3x.png" 
+          class="bottom-big-head-coach2"
+          alt="coachpotato_mascot_cap">
+        </footer>
 
       </div>
     </div>
