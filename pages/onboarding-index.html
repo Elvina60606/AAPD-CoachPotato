@@ -11,61 +11,72 @@
     />
   </head>
   <body>
-    <div
-      class="bg-primary-base overflow-hidden d-flex flex-column" 
-      style="height: 100dvh"
-    >
-      <header
-        class="bg-accent-400 px-7 py-6 d-flex justify-content-between align-items-center w-100"
+    <div class="bg-primary-base">
+      <div
+        class="overflow-hidden d-flex flex-column" 
+        style="height: 100dvh"
       >
-        <p class="header-time">9:41</p>
-        <div class="d-flex align-items-center gap-2">
-          <img
-            src="../assets/images/icon_phone/Mobile_Signal.svg"
-            alt="Mobile Signal"
-          />
-          <img src="../assets/images/icon_phone/Wifi.svg" alt="Wifi" />
-          <img
-            src="../assets/images/icon_phone/StatusBar-battery.svg"
-            alt="StatusBar-battery"
-          />
-        </div>
-      </header>
-      
-      <main class="circle-container overflow-hidden z-0 px-4 w-100">
-        <div
-          class="position-relative z-1 d-flex flex-column align-items-center pt-110"
+        <header
+          class="bg-accent-400 px-7 py-6 d-flex justify-content-between align-items-center w-100 z-1"
         >
-          <div
-            class="d-flex flex-column align-items-center mb-3 animate__animated animate__fadeIn animate__delay-2s"
-          >
-            <h3 class="text-white pb-4">嗨！我是Coach Potato</h3>
-            <p class="text-white">我是你的專屬教練！</p>
-            <p class="text-white">讓我們一起開始這段健康旅程吧！</p>
+          <p class="header-time">9:41</p>
+          <div class="d-flex align-items-center gap-2">
+            <img
+              src="../assets/images/icon_phone/Mobile_Signal.svg"
+              alt="Mobile Signal"
+            />
+            <img src="../assets/images/icon_phone/Wifi.svg" alt="Wifi" />
+            <img
+              src="../assets/images/icon_phone/StatusBar-battery.svg"
+              alt="StatusBar-battery"
+            />
           </div>
-          <img
-            src="../assets/images/draw_potatoCoach/CoachPotato_go@3x.png"
-            class="animate__animated animate__fadeInUp animate__delay-2s"
-            alt="CoachPotato_go@3x"
-            style="max-width: 311px"
-          />
-        </div>
-    <!--index背景同心圓-->
-        <div class="circle circle1 bg-accent-50"></div>
-        <div class="circle circle2 bg-accent-200"></div>
-        <div class="circle circle3 bg-accent-300"></div>
-        <div class="circle circle4 bg-accent-400"></div>
-      </main>
-
-      <footer class="px-4 pt-4 pb-7 mt-auto bg-primary-base w-100">
-        <a href="onboarding-info.html">
+        </header>
+        
+        <main class="circle-container z-0 px-4 w-100">
           <div
-            class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-2s"
+            class="position-relative z-1 d-flex flex-column align-items-center pt-110"
           >
-            <p class="h3 text-center mb-0">開始</p>
+            <div
+              class="d-flex flex-column align-items-center mb-3 animate__animated animate__fadeIn animate__delay-2s"
+            >
+              <h3 class="text-white pb-4">嗨！我是Coach Potato</h3>
+              <p class="text-white">我是你的專屬教練！</p>
+              <p class="text-white">讓我們一起開始這段健康旅程吧！</p>
+            </div>
+            <img
+              src="../assets/images/draw_potatoCoach/CoachPotato_go@3x.png"
+              class="animate__animated animate__fadeInUp animate__delay-2s"
+              alt="CoachPotato_go@3x"
+              style="max-width: 311px"
+            />
           </div>
-        </a>
-      </footer>
+      <!--index背景同心圓-->
+          <div class="circle circle1 bg-accent-50"></div>
+          <div class="circle circle2 bg-accent-200"></div>
+          <div class="circle circle3 bg-accent-300"></div>
+          <div class="circle circle4 bg-accent-400"></div>
+        </main>
+  
+        <footer class="px-4 pt-4 pb-7 mt-auto bg-primary-base w-100 footer-in">
+          <a href="onboarding-info.html">
+            <div
+              class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-1s"
+            >
+              <p class="h3 text-center mb-0">開始</p>
+            </div>
+          </a>
+        </footer>
+      </div>
+      <footer class="px-4 pt-4 pb-7 mt-auto bg-primary-base w-100 footer-out">
+          <a href="onboarding-info.html">
+            <div
+              class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-2s"
+            >
+              <p class="h3 text-center mb-0">開始</p>
+            </div>
+          </a>
+        </footer>
     </div>
 
     <script type="module" src="../main.js"></script>
