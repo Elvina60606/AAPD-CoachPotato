@@ -1,10 +1,3 @@
-.wrap{
-  max-width: 768px;
-  margin: 0 auto;
-  height: 100vh;
-  height: 100dvh;
-}
-
 .circle-container {
   position: relative;
   max-width: 100%;
@@ -44,4 +37,21 @@
 
 .pt-110{
   padding-top: 110px;
+}
+
+.footer-in{
+  display: none;
+}
+
+.footer-out{
+  display: block;
+}
+
+@media (min-height:660px) {
+ .footer-in{
+  display: block;
+  } 
+  .footer-out{
+    display: none;
+  }
 }

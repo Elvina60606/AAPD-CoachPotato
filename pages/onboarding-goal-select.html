@@ -8,10 +8,11 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
-    <div class="wrap bg-primary-100">
-      <div class="bg-primary-100 d-flex flex-column">
+    <div class="bg-primary-100">
+      <div class="d-flex flex-column align-items-center overflow-hidden"
+           style="min-height: 100dvh">
         <header
-          class="header px-7 py-6 d-flex justify-content-between align-items-center"
+          class="header px-7 py-6 d-flex justify-content-between align-items-center w-100"
         >
           <p class="header-time">9:41</p>
           <div class="d-flex align-items-center gap-2">
@@ -26,8 +27,7 @@
             />
           </div>
         </header>
-        <div class="py-3 ps-6 mb-4">
-          <!-- 展示用｜暫時連到數據結果頁 -->
+        <div class="py-3 ps-6 mb-4 w-100">
           <a href="onboarding-data.html" class="btn border-0 p-0">
               <img
                 class="border rounded-circle bg-white arrow-prev-btn"
@@ -66,15 +66,15 @@
               <p class="text-black fs-7">養成健康習慣，保持體態</p>
             </a>
           </div>
-
-          <div class="overflow-hidden">
-            <img
-              src="../assets/images/draw_potatoCoach/coachpotato_mascot_cap@3x.png"
-              class="bottom-big-head-coach1"
-              alt="coachpotato_mascot_cap"
-            />
-          </div>
         </main>
+
+        <footer class="overflow-hidden mt-auto">
+          <img
+            src="../assets/images/draw_potatoCoach/coachpotato_mascot_cap@3x.png"
+            class="bottom-big-head-coach1"
+            alt="coachpotato_mascot_cap"
+          />
+        </footer>
       </div>
     </div>
 
