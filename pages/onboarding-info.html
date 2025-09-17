@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>基本資料頁面</title>
-
   </head>
   <body>
     <div class="wrap bottom-safe">
@@ -16,12 +15,12 @@
         <%- include('./layout/header'); -%>
         <div class="app__status-bar-space"></div>
         <div class="pb-3 ps-6 mb-4">
-          <a href="index.html" class="btn border-0 p-0">
-              <img
-                class="border rounded-circle bg-white arrow-prev-btn"
-                src="../assets/images/icon/arrow-prev.svg"
-                alt="arrow-prev"
-              />
+          <a href="onboarding-index.html" class="btn border-0 p-0">
+            <img
+              class="border rounded-circle bg-white arrow-prev-btn"
+              src="../assets/images/icon/arrow-prev.svg"
+              alt="arrow-prev"
+            />
           </a>
         </div>
         <div class="px-5 py-7 d-flex flex-column align-items-center">
@@ -69,7 +68,9 @@
             <!--dropdown info-->
             <!--性別-->
             <div class="w-100 position-relative">
-              <div class="btn bg-white rounded-top-4 rounded-bottom-0 w-100 d-flex justify-content-between align-items-center py-5">
+              <div
+                class="btn bg-white rounded-top-4 rounded-bottom-0 w-100 d-flex justify-content-between align-items-center py-5"
+              >
                 <div class="d-flex align-items-center">
                   <img
                     src="../assets/images/icon/icon_GenderIntersex.svg"
@@ -84,15 +85,19 @@
                   class="arrowRight_20"
                 />
               </div>
-              <select id="genderSelect"
-                      class="position-absolute top-0 start-0 w-100 h-100 opacity-0 fs-6">
-                          <option value="male">男</option>
-                          <option value="female">女</option>
+              <select
+                id="genderSelect"
+                class="position-absolute top-0 start-0 w-100 h-100 opacity-0 fs-6"
+              >
+                <option value="male">男</option>
+                <option value="female">女</option>
               </select>
             </div>
             <!--身高-->
             <div class="w-100 position-relative">
-              <div class="btn bg-white rounded-0 w-100 d-flex justify-content-between align-items-center py-5">
+              <div
+                class="btn bg-white rounded-0 w-100 d-flex justify-content-between align-items-center py-5"
+              >
                 <div class="d-flex align-items-center">
                   <img
                     src="../assets/images/icon/icon_Person.svg"
@@ -107,9 +112,10 @@
                   class="arrowRight_20"
                 />
               </div>
-              <select id="bodyHeightSelect"
-                      class="position-absolute top-0 start-0 w-100 h-100 opacity-0 fs-6">
-              </select>
+              <select
+                id="bodyHeightSelect"
+                class="position-absolute top-0 start-0 w-100 h-100 opacity-0 fs-6"
+              ></select>
             </div>
 
             <!--生日flatpickr-->
@@ -134,27 +140,28 @@
                   class="arrowRight_20"
                 />
               </button>
-              <input type="text" 
-                     id="birthdayInput"
-                     class="position-absolute opacity-0" 
-                     style="width: 1px; height: 1px; pointer-events: none;"
+              <input
+                type="text"
+                id="birthdayInput"
+                class="position-absolute opacity-0"
+                style="width: 1px; height: 1px; pointer-events: none"
               />
-
             </div>
           </div>
         </div>
         <footer class="px-4 pt-4 pb-7 mt-auto bg-primary-base w-100">
           <a href="onboarding-pair.html">
-            <div class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-2s"
+            <div
+              class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-2s"
             >
               <p class="h3 text-center mb-0">繼續</p>
-          </div>
+            </div>
           </a>
         </footer>
       </main>
     </div>
 
-  <!--暱稱轉換-->
+    <!--暱稱轉換-->
     <script>
       const input = document.getElementById("nickName");
       const placeholders = ["暱稱", "Wendy"];
@@ -174,21 +181,21 @@
         }, 500);
       }, 2000); //
     </script>
-  <!--身高數值-->
+    <!--身高數值-->
     <script>
-       document.addEventListener("DOMContentLoaded", () => {
-          const select = document.getElementById("bodyHeightSelect");
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.getElementById("bodyHeightSelect");
 
-          for (let i = 145; i <= 195; i++) {
-            const option = document.createElement("option");
-            option.value = i;
-            option.textContent = `${i} cm`;
-            select.appendChild(option);
-          }
-        });
+        for (let i = 145; i <= 195; i++) {
+          const option = document.createElement("option");
+          option.value = i;
+          option.textContent = `${i} cm`;
+          select.appendChild(option);
+        }
+      });
     </script>
-  <!--生日日曆-->
-   <script type="module" src="../assets/js/info-birthday.js"></script>
-   <script type="module" src="../main.js"></script>
+    <!--生日日曆-->
+    <script type="module" src="../assets/js/info-birthday.js"></script>
+    <script type="module" src="../main.js"></script>
   </body>
 </html>
