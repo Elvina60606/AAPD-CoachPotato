@@ -39,7 +39,7 @@
       <div class="app__status-bar-space"></div>
       <div class="container">
         <!-- 回上一頁按鈕 -->
-        <nav class="position-fixed py-3 px-3 mb-2">
+        <nav class="position-fixed py-3 px-3 mb-2 z-2">
           <a href="./onboarding-level-select.html">
             <i class="ph ph-arrow-left icon__bg-circle--w"></i>
           </a>
@@ -257,7 +257,6 @@
         </main>
 
         <!-- 置底確認按鈕 -->
-        <!-- 待修：js 判斷式無法起作用 -->
         <footer id="scrollButton" class="fixed-bottom px-4 pt-4 pb-7">
           <button
             type="button"
@@ -272,6 +271,8 @@
     <!-- 底圖裝飾實心圓 -->
     <div class="bg__solid-circle"></div>
 
+    <!-- 載入自訂 js：按鈕控制 -->
+    <script type="module" src="../assets/js/button.js"></script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
