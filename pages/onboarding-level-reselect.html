@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>選擇難度頁面</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="bg-primary-100">
+      <div class="d-flex flex-column align-items-center overflow-hidden"    
+           style="min-height: 100dvh">
+        <header class="header px-7 py-6 d-flex justify-content-between align-items-center w-100">
+            <p class="header-time">9:41</p>
+            <div class="d-flex align-items-center gap-2">
+                <img src="../assets/images/icon_phone/Mobile_Signal.svg" alt="Mobile Signal"/>
+                <img src="../assets/images/icon_phone/Wifi.svg" alt="Wifi" />
+                <img src="../assets/images/icon_phone/StatusBar-battery.svg"   
+                     alt="StatusBar-battery"/>
+            </div>
+        </header>        
+    <!--上一頁-->
+        <div class="py-3 ps-6 mb-4 w-100">
+          <a href="onboarding-goal-reselect.html" class="btn border-0 p-0">
+              <img
+                class="border rounded-circle bg-white arrow-prev-btn"
+                src="../assets/images/icon/arrow-prev.svg"
+                alt="arrow-prev"/>
+          </a>
+        </div>
+
+        <main class="d-flex flex-column align-items-center px-5 w-100">
+          <div class="text-center mb-5">
+            <h3 class="text-neutral-950">您期望的任務執行模式</h3>
+          </div>
+          
+          <div class="w-100 mb-5">
+            <a class="btn goal-select rounded-4 shadow py-5 mb-5 w-100"   
+               href="onboarding-quest.html">
+              <h4 class="text-black">簡單</h4>
+              <p class="text-black fs-7">6週內完成</p>
+            </a>
+
+            <a class="btn goal-select rounded-4 shadow py-5 mb-5 w-100"   
+               href="onboarding-quest.html">
+              <h4 class="text-black">正常</h4>
+              <p class="text-black fs-7">3週內時間</p>
+            </a>
+
+            <a class="btn goal-select rounded-4 shadow py-5 w-100"   
+               href="onboarding-quest.html">
+              <h4 class="text-black">困難</h4>
+              <p class="text-black fs-7">2週內完成</p>
+            </a>
+          </div>
+
+          <a class="fs-4 text-neutral-500" 
+             href="onboarding-goal-reselect.html">我再考慮
+          </a>
+        </main>
+        <footer class="overflow-hidden mt-auto">
+          <img src="../assets/images/draw_potatoCoach/coachpotato_mascot_cap@3x.png" 
+          class="bottom-big-head-coach2"
+          alt="coachpotato_mascot_cap">
+        </footer>
+
+      </div>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
