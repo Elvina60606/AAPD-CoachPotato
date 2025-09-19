@@ -4,22 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>onboarding-1</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <title>再次選擇目標頁面</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script type="module" crossorigin src="/AAPD-CoachPotato/assets/main-CvSp0EZt.js"></script>
     <link rel="stylesheet" crossorigin href="/AAPD-CoachPotato/assets/main-DxSn7d4c.css">
   </head>
   <body>
-    <div class="bg-primary-base">
-      <div
-        class="overflow-hidden d-flex flex-column" 
-        style="height: 100dvh"
-      >
+    <div class="bg-primary-100">
+      <div class="d-flex flex-column align-items-center overflow-hidden"
+           style="min-height: 100dvh">
         <header
-          class="bg-accent-400 px-7 py-6 d-flex justify-content-between align-items-center w-100 z-1"
+          class="header px-7 py-6 d-flex justify-content-between align-items-center w-100"
         >
           <p class="header-time">9:41</p>
           <div class="d-flex align-items-center gap-2">
@@ -34,51 +29,59 @@
             />
           </div>
         </header>
-        
-        <main class="circle-container z-0 px-4 w-100">
-          <div
-            class="position-relative z-1 d-flex flex-column align-items-center pt-110"
-          >
-            <div
-              class="d-flex flex-column align-items-center mb-3 animate__animated animate__fadeIn animate__delay-2s"
-            >
-              <h3 class="text-white pb-4">嗨！我是Coach Potato</h3>
-              <p class="text-white">我是你的專屬教練！</p>
-              <p class="text-white">讓我們一起開始這段健康旅程吧！</p>
-            </div>
-            <img
-              src="/AAPD-CoachPotato/assets/CoachPotato_go@3x-DlqDKZPe.png"
-              class="animate__animated animate__fadeInUp animate__delay-2s"
-              alt="CoachPotato_go@3x"
-              style="max-width: 311px"
-            />
-          </div>
-      <!--index背景同心圓-->
-          <div class="circle circle1 bg-accent-50"></div>
-          <div class="circle circle2 bg-accent-200"></div>
-          <div class="circle circle3 bg-accent-300"></div>
-          <div class="circle circle4 bg-accent-400"></div>
-        </main>
-  
-        <footer class="px-4 pt-4 pb-7 mt-auto bg-primary-base w-100 footer-in">
-          <a href="onboarding-info.html">
-            <div
-              class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-1s"
-            >
-              <p class="h3 text-center mb-0">開始</p>
-            </div>
+        <div class="py-3 ps-6 mb-4 w-100">
+          <a href="modify-task.html" class="btn border-0 p-0">
+              <img
+                class="border rounded-circle bg-white arrow-prev-btn"
+                src="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2.17108%209.3891L7.42091%2014.3388C7.53036%2014.442%207.67881%2014.5%207.8336%2014.5C7.98839%2014.5%208.13684%2014.442%208.2463%2014.3388C8.35575%2014.2356%208.41724%2014.0957%208.41724%2013.9497C8.41724%2013.8038%208.35575%2013.6638%208.2463%2013.5606L3.99175%209.54997H15.4167C15.5714%209.54997%2015.7198%209.49203%2015.8292%209.38889C15.9385%209.28575%2016%209.14586%2016%209C16%208.85414%2015.9385%208.71425%2015.8292%208.61111C15.7198%208.50797%2015.5714%208.45003%2015.4167%208.45003H3.99175L8.2463%204.43938C8.35575%204.33618%208.41724%204.19622%208.41724%204.05028C8.41724%203.90433%208.35575%203.76437%208.2463%203.66117C8.13684%203.55798%207.98839%203.5%207.8336%203.5C7.67881%203.5%207.53036%203.55798%207.42091%203.66117L2.17108%208.6109C2.11684%208.66197%202.07382%208.72263%202.04446%208.78939C2.01511%208.85616%202%208.92772%202%209C2%209.07227%202.01511%209.14384%202.04446%209.21061C2.07382%209.27737%202.11684%209.33803%202.17108%209.3891Z'%20fill='%23121212'/%3e%3c/svg%3e"
+                alt="arrow-prev"
+              />
           </a>
+        </div>
+
+        <main class="d-flex flex-column align-items-center px-5 overflow-hidden">
+          <div class="text-center mb-5">
+            <h3 class="text-neutral-950">設定您的目標</h3>
+            <p class="text-neutral-950">請選擇您想達成的目標</p>
+          </div>
+
+          <div class="w-100 mb-5">
+            <a
+              class="btn goal-select rounded-4 shadow py-5 mb-5 w-100"
+              href="onboarding-level-reselect.html"
+            >
+              <h4 class="text-black">減脂</h4>
+              <p class="text-black fs-7">減少體脂肪，打造精實身材</p>
+            </a>
+            <a
+              class="btn goal-select rounded-4 shadow py-5 mb-5 w-100"
+              href="onboarding-level-select.html"
+            >
+              <h4 class="text-black">增肌</h4>
+              <p class="text-black fs-7">增加肌肉量，提升基礎代謝</p>
+            </a>
+            <a
+              class="btn goal-select rounded-4 shadow py-5 w-100"
+              href="onboarding-level-select.html"
+            >
+              <h4 class="text-black">保持</h4>
+              <p class="text-black fs-7">養成健康習慣，保持體態</p>
+            </a>
+          </div>
+
+          <a class="fs-4 text-neutral-500" 
+             href="modify-task.html">我再考慮
+          </a>
+        </main>
+
+        <footer class="overflow-hidden mt-auto">
+          <img
+            src="/AAPD-CoachPotato/assets/coachpotato_mascot_cap@3x-C2WTzie8.png"
+            class="bottom-big-head-coach1"
+            alt="coachpotato_mascot_cap"
+          />
         </footer>
       </div>
-      <footer class="px-4 pt-4 pb-7 mt-auto bg-primary-base w-100 footer-out">
-          <a href="onboarding-info.html">
-            <div
-              class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-2s"
-            >
-              <p class="h3 text-center mb-0">開始</p>
-            </div>
-          </a>
-        </footer>
     </div>
 
   </body>
