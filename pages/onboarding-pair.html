@@ -7,19 +7,18 @@
     <title>配對體脂機頁面</title>
   </head>
   <body>
-    <div class="wrap">
-      <div class="bg-primary-base d-flex flex-column" style="min-height: 100vh">
+    <div class="bg-primary-base">
+      <div class="d-flex flex-column" 
+           style="min-height: 100dvh">
         <%- include('./layout/header'); -%>
-
-        <div class="pt-12 pb-3 ps-6 mb-4 align-self-start">
-          <a href="onboarding-info.html">
-            <button class="btn border-0 p-0">
+        <div class="app__status-bar-space"></div>
+        <div class="pb-3 ps-6 mb-4 align-self-start">
+          <a href="onboarding-info.html" class="btn border-0 p-0">
               <img
                 class="border rounded-circle bg-white arrow-prev-btn"
                 src="../assets/images/icon/arrow-prev.svg"
                 alt="arrow-prev"
               />
-            </button>
           </a>
         </div>
 
@@ -51,12 +50,11 @@
 
         <footer class="px-4 pt-4 pb-7 mt-auto bg-primary-base w-100">
           <a href="onboarding-measure.html">
-            <button
-              type="button"
+            <div
               class="footer-btn rounded-pill w-100 py-4 animate__animated animate__fadeIn animate__delay-2s"
             >
-              <span class="h3">繼續</span>
-            </button>
+              <p class="h3 text-center mb-0">繼續</p>
+          </div>
           </a>
         </footer>
       </div>

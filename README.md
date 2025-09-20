@@ -5,6 +5,10 @@
 - UI 組第 28 組：Jocelyn、Momo、shelly（組長）、Shu、Tzu
 - 工程組第 12 組：elvina0_0（組長）、Hao、禹成林
 
+## Node.js 版本
+
+- v18 以上
+
 ### 指令列表
 
 - `node -v` - 查看自己版本
@@ -14,10 +18,6 @@
     `http://localhost:5173/<專案名稱>/pages/index.html`
 - `npm run build` - 執行編譯模式（不會開啟瀏覽器）
 - `npm ru deploy` - 自動化部署
-
-## Node.js 版本
-
-- v18 以上
 
 ## 資料夾結構
 
