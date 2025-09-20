@@ -1,50 +1,213 @@
 .header-primary {
-    background-color: var(--bs-primary-base);
+  background-color: var(--bs-primary-base);
 }
 
 .filter-nav {
-    .nav-pills {
-        .nav-link {
-            background: transparent;
-            color: var(--bs-neutral-700);
-            border: none;
-            
-            &.active {
-            background-color: var(--bs-neutral-950);
-            color: white;
-            }
-        }
+  .nav-pills {
+    .nav-link {
+      background: transparent;
+      color: var(--bs-neutral-700);
+      border: none;
+
+      &.active {
+        background-color: var(--bs-neutral-950);
+        color: white;
+      }
     }
+  }
+}
+
+.lh-md {
+  line-height: 1.4;
 }
 
 .ph-smiley-sad {
-        color: #F85F18;
+  color: #f85f18;
 }
 
 .ph-smiley {
-        color: #009F99;
+  color: #009f99;
 }
 
 .color-danger {
-    color: #F85F18;
+  color: #f85f18;
 }
 
 .color-success {
-    color: #009F99;
+  color: #009f99;
 }
 
 .bg-accent-400-20 {
-    background-color: #96BDFA33;
+  background-color: #96bdfa33;
 }
 
 .ph-megaphone {
-    transform: scaleX(-1);
-}          
+  transform: scaleX(-1);
+}
 
 .bottom-safe {
-    padding-bottom: calc(60px + env(safe-area-inset-bottom));
+  padding-bottom: calc(60px + env(safe-area-inset-bottom));
 }
 
 .coach8 {
-    width: 206px;
+  width: 206px;
+}
+
+// 本週數據卡片
+
+// 狀態指示器
+.status-indicator {
+  width: 102px;
+}
+
+.status-bar {
+  height: 4px;
+  flex: 1;
+}
+
+// 箭頭按鈕
+.arrow-btn {
+  width: 32px;
+  height: 32px;
+}
+
+// 圖表區域
+.chart-container {
+  height: 70px;
+  width: 150px;
+}
+
+.chart-day {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 26px; // 調整位置避開標籤
+    width: 10px;
+    height: 48px; // 滿高度
+    background-color: var(--bs-neutral-100); // 或你的背景色變數
+    border-radius: 50px;
+    z-index: 1;
+  }
+}
+
+.chart-bar {
+  position: relative;
+  z-index: 2;
+  width: 10px;
+
+  // 不同高度的柱子
+  &--29 {
+    height: 29px;
+  }
+
+  &--34 {
+    height: 34px;
+  }
+
+  &--28 {
+    height: 28px;
+  }
+
+  &--24 {
+    height: 24px;
+  }
+
+  &--31 {
+    height: 31px;
+  }
+
+  &--37 {
+    height: 37px;
+  }
+
+  &--30 {
+    height: 30px;
+  }
+}
+
+.status-indicator-wrapper {
+  .status-bar-item {
+    width: 24px; // 可以在這裡調整每個格子的寬度
+    min-height: 24px;
+
+    .status-text-wrapper {
+      height: 20px;
+    }
+
+    .status-bar-line {
+      border-bottom: 4px solid;
+    }
+  }
+}
+
+// BMI 圓點圖專用樣式
+.chart-dot-container {
+  .chart-day-dot {
+    position: relative;
+
+    // 灰色背景柱
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 26px;
+      width: 10px;
+      height: 48px;
+      background-color: var(--bs-neutral-100);
+      border-radius: 50px;
+      z-index: 1;
+    }
+
+    .dot-wrapper {
+      position: relative;
+      width: 10px;
+      height: 48px;
+      z-index: 2;
+
+      // 橘色圓點
+      &::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: var(--bs-primary);
+        border-radius: 50%;
+        left: 50%;
+        bottom: 0; // 預設在底部
+        transform: translateX(-50%);
+        transition: bottom 0.3s ease; // 加個動畫效果
+      }
+
+      // 使用 data attribute 來動態設置位置
+      @for $i from 0 through 48 {
+        &[data-position="#{$i}"]::after {
+          bottom: #{$i}px;
+        }
+      }
+    }
+  }
+}
+
+// 體脂肪率曲線面積圖專用樣式
+.chart-area-container {
+  .area-chart-wrapper {
+    position: relative;
+    width: 150px;
+
+    .area-chart-svg {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .area-chart-labels {
+      width: 100%;
+
+      .chart-label {
+        flex: 1;
+        text-align: center;
+        font-size: 0.75rem;
+      }
+    }
+  }
 }
